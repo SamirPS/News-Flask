@@ -23,58 +23,84 @@
 </nav>
 <br>
 
+
+
 <main role="main" class="container">
-    <div class="jumbotron text-center">
-        {% for key in CNN%}
-        <img border="0" class="img-fluid"  onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{CNN[key]["img"]}}' >
-      </br>
+  <div class="jumbotron text-center">
 
-        <a href='{{CNN[key]["link"]}}' target="_blank">{{CNN[key]["title"]}}</a>
-        </br>
-      </br>
-
-        {% endfor %}
+    {% for key in CNN%}
+        <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{CNN[key]["img"]}}' >
     </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">CNN</h5>
+      <p>{{CNN[key]["title"]}}</p>
+      <a href='{{CNN[key]["link"]}}' class="stretched-link">Go</a>
+    </div>
+  </div>
+  <br>
+       {% endfor %}
+</div>
 </main>
 
+
 <main role="main" class="container">
-    <div class="jumbotron text-center">
-        {% for key in FoxNews%}
-        <img border="0"  class="img-fluid"  onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{FoxNews[key]["img"]}}' >
-      </br>
+  <div class="jumbotron text-center">
 
-        <a href='{{FoxNews[key]["link"]}}' target="_blank">{{FoxNews[key]["title"]}}</a>
-      </br>
-
-        </br>
-        {% endfor %}
+    {% for key in FoxNews%}
+        <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{FoxNews[key]["img"]}}' >
     </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">FoxNews</h5>
+      <p>{{FoxNews[key]["title"]}}</p>
+      <a href='{{FoxNews[key]["link"]}}' class="stretched-link">Go</a>
+    </div>
+  </div>
+  <br>
+       {% endfor %}
+</div>
 </main>
 
+
 <main role="main" class="container">
-    <div class="jumbotron text-center">
-        {% for key in AbcNews%}
-        <img border="0"  class="img-fluid"   onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{AbcNews[key]["img"]}}' >
-      </br>
+  <div class="jumbotron text-center">
 
-        <a href='{{AbcNews[key]["link"]}}' target="_blank">{{AbcNews[key]["title"]}}</a>
-      </br>
-
-        </br>
-        {% endfor %}
+    {% for key in AbcNews%}
+        <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
     </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">AbcNews</h5>
+      <p>{{AbcNews[key]["title"]}}</p>
+      <a href='{{AbcNews[key]["link"]}}' class="stretched-link">Go</a>
+    </div>
+  </div>
+  <br>
+       {% endfor %}
+</div>
 </main>
+
+
 <main role="main" class="container">
-    <div class="jumbotron text-center">
-        {% for key in TheGuardian%}
-        <img border="0"  class="img-fluid"    onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{TheGuardian[key]["img"]}}' >
-      </br>
+  <div class="jumbotron text-center">
 
-        <a href='{{TheGuardian[key]["link"]}}' target="_blank">{{TheGuardian[key]["title"]}}</a>
-      </br>
-
-        </br>
-        {% endfor %}
+    {% for key in TheGuardian%}
+        <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{TheGuardian[key]["img"]}}' >
     </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">TheGuardian</h5>
+      <p>{{TheGuardian[key]["title"]}}</p>
+      <a href='{{TheGuardian[key]["link"]}}' class="stretched-link">Go</a>
+    </div>
+  </div>
+  <br>
+       {% endfor %}
+</div>
 </main>
 
