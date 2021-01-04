@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 newsscrapper-samirps = "==0.0.2"
+gunicorn = "*"
 
 [dev-packages]
 
