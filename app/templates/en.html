@@ -1,0 +1,59 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
+    <a class="navbar-brand" href="#">News Web </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="https://newswebs.herokuapp.com/fr" target="_blank">Fr</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="https://newswebs.herokuapp.com/en" target="_blank">En</a>
+
+            </li>
+
+            
+        </div>
+</div>
+<main role="main" class="container">
+    <div class="jumbotron text-center">
+        {% for key in CNN%}
+        <a href='{{CNN[key]["link"]}}'><img border="0" style="width:500px; height:500px"  src='{{CNN[key]["img"]}}' ></a>
+        </br>
+        {% endfor %}
+    </div>
+</main>
+
+<main role="main" class="container">
+    <div class="jumbotron text-center">
+        {% for key in FoxNews%}
+        <a href='{{FoxNews[key]["link"]}}'><img border="0" style="width:500px; height:500px"  src='{{FoxNews[key]["img"]}}' >
+        </br>
+        {% endfor %}
+    </div>
+</main>
+
+<main role="main" class="container">
+    <div class="jumbotron text-center">
+        {% for key in AbcNews%}
+        <a href='{{AbcNews[key]["link"]}}'><img border="0" style="width:500px; height:500px"  src='{{AbcNews[key]["img"]}}' >
+        </br>
+        {% endfor %}
+    </div>
+</main>
+<main role="main" class="container">
+    <div class="jumbotron text-center">
+        {% for key in TheGuardian%}
+        <a href='{{TheGuardian[key]["link"]}}'><img border="0" style="width:500px; height:500px"  src='{{TheGuardian[key]["img"]}}' >
+        </br>
+        {% endfor %}
+    </div>
+</main>
+
