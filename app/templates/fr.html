@@ -24,16 +24,22 @@
 <br>
 
 
-
 <main role="main" class="container">
-    <div class="jumbotron text-center">
-        {% for key in LeMonde%}
-        <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{LeMonde[key]["img"]}}' >
-        </br>
-        <a href='{{LeMonde[key]["link"]}}' target="_blank">{{LeMonde[key]["title"]}}</a>
-        </br>
-        </br>
-        {% endfor %}
+        <div class="jumbotron text-center">
+
+  {% for key in LeMonde%}
+      <div class="row no-gutters bg-light position-relative">
+  <div class="col-md-6 mb-md-0 p-md-4">
+    <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{LeMonde[key]["img"]}}' >
+  </div>
+  <div class="col-md-6 position-static p-4 pl-md-0">
+    <h5 class="mt-0">LeMonde</h5>
+    <p>{{LeMonde[key]["title"]}}</p>
+    <a href='{{LeMonde[key]["link"]}}' class="stretched-link">Go</a>
+  </div>
+</div>
+     {% endfor %}
+        
     </div>
 </main>
 
