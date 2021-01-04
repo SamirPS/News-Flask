@@ -34,7 +34,7 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in FoxNews%}
-        <a href='{{FoxNews[key]["link"]}}' target="_blank"><img border="0" style="width:500px; height:500px"  src='{{FoxNews[key]["img"]}}' >
+        <a href='{{FoxNews[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{FoxNews[key]["img"]}}' >
         </br>
         {% endfor %}
     </div>
@@ -43,7 +43,7 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in AbcNews%}
-        <a href='{{AbcNews[key]["link"]}}' target="_blank"><img border="0" style="width:500px; height:500px"  src='{{AbcNews[key]["img"]}}' >
+        <a href='{{AbcNews[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
         </br>
         {% endfor %}
     </div>
@@ -51,7 +51,7 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in TheGuardian%}
-        <a href='{{TheGuardian[key]["link"]}}' target="_blank"><img border="0" style="width:500px; height:500px"  src='{{TheGuardian[key]["img"]}}' >
+        <a href='{{TheGuardian[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{TheGuardian[key]["img"]}}' >
         </br>
         {% endfor %}
     </div>
