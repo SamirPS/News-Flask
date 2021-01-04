@@ -75,50 +75,65 @@ function topFunction() {
 </nav>
 <br>
 
-
 <main role="main" class="container">
-        <div class="jumbotron text-center">
+  <div class="jumbotron text-center">
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#LeMonde" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">LeMonde</a></p>
 
-  {% for key in LeMonde%}
-      <div class="row no-gutters bg-light position-relative">
-  <div class="col-md-6 mb-md-0 p-md-4">
-    <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{LeMonde[key]["img"]}}' >
+    <div class="collapse multi-collapse" id="LeMonde">
+      <div class="card card-body">
+         {% for key in LeMonde%}
+        <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{LeMonde[key]["img"]}}' >
+    </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">LeMonde</h5>
+      <p>{{LeMonde[key]["title"]}}</p>
+      <a href='{{LeMonde[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
+    </div>
   </div>
-  <div class="col-md-6 position-static p-4 pl-md-0">
-    <h5 class="mt-0">LeMonde</h5>
-    <p>{{LeMonde[key]["title"]}}</p>
-    <a href='{{LeMonde[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-  </div>
-</div>
 <br>
-     {% endfor %}
-        
+       {% endfor %}
+      </div>
     </div>
-</main>
-
-<main role="main" class="container">
-        <div class="jumbotron text-center">
-
-          {% for key in LeParisien%}
-              <div class="row no-gutters bg-light position-relative">
-          <div class="col-md-6 mb-md-0 p-md-4">
-            <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{LeParisien[key]["img"]}}' >
-          </div>
-          <div class="col-md-6 position-static p-4 pl-md-0">
-            <h5 class="mt-0">LeParisien</h5>
-            <p>{{LeParisien[key]["title"]}}</p>
-            <a href='{{LeParisien[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-          </div>
-        </div>
-        <br>
-             {% endfor %}
-    </div>
+  </div>
+   
+</div>
 </main>
 
 <main role="main" class="container">
   <div class="jumbotron text-center">
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#LeParisien" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">LeParisien</a></p>
 
-    {% for key in MediaPart%}
+    <div class="collapse multi-collapse" id="LeParisien">
+      <div class="card card-body">
+         {% for key in LeParisien%}
+        <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{LeParisien[key]["img"]}}' >
+    </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">LeParisien</h5>
+      <p>{{LeParisien[key]["title"]}}</p>
+      <a href='{{LeParisien[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
+    </div>
+  </div>
+<br>
+       {% endfor %}
+      </div>
+    </div>
+  </div>
+   
+</div>
+</main>
+
+<main role="main" class="container">
+  <div class="jumbotron text-center">
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#MediaPart" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">MediaPart</a></p>
+
+    <div class="collapse multi-collapse" id="MediaPart">
+      <div class="card card-body">
+         {% for key in MediaPart%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{MediaPart[key]["img"]}}' >
@@ -129,16 +144,22 @@ function topFunction() {
       <a href='{{MediaPart[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
 </main>
 
-
 <main role="main" class="container">
   <div class="jumbotron text-center">
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#BFMTV" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">BFMTV</a></p>
 
-    {% for key in BFMTV%}
+    <div class="collapse multi-collapse" id="BFMTV">
+      <div class="card card-body">
+         {% for key in BFMTV%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{BFMTV[key]["img"]}}' >
@@ -149,17 +170,23 @@ function topFunction() {
       <a href='{{BFMTV[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
 </main>
 
 
-
 <main role="main" class="container">
   <div class="jumbotron text-center">
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#Liberation" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Liberation</a></p>
 
-    {% for key in Liberation%}
+    <div class="collapse multi-collapse" id="Liberation">
+      <div class="card card-body">
+         {% for key in Liberation%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{Liberation[key]["img"]}}' >
@@ -170,15 +197,24 @@ function topFunction() {
       <a href='{{Liberation[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
 </main>
 
-ain role="main" class="container">
-  <div class="jumbotron text-center">
 
-    {% for key in FranceTvINFO%}
+
+<main role="main" class="container">
+  <div class="jumbotron text-center">
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#FranceTvINFO" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">FranceTvINFO</a></p>
+
+    <div class="collapse multi-collapse" id="FranceTvINFO">
+      <div class="card card-body">
+         {% for key in FranceTvINFO%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{FranceTvINFO[key]["img"]}}' >
@@ -189,8 +225,14 @@ ain role="main" class="container">
       <a href='{{FranceTvINFO[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
-</main><m
+</main>
+
+
 
