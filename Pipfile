@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 gunicorn = "*"
 flask = "*"
-newsscrapper-samirps = "==0.0.4"
+newsscrapper-samirps = "==0.0.5"
 
 [dev-packages]
 
