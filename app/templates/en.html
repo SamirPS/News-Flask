@@ -77,8 +77,18 @@ function topFunction() {
 
 
 <main role="main" class="container">
+<div class="card">
+    <div class="card-header" id="CNN">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#CNN" aria-expanded="true" aria-controls="collapseOne">
+          CNN
+        </button>
+      </h5>
+    </div>
+  
   <div class="jumbotron text-center">
-
+   <div id="CNN" class="collapse show" aria-labelledby="CNN" data-parent="#accordion">
+      <div class="card-body">
     {% for key in CNN%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
@@ -90,15 +100,27 @@ function topFunction() {
       <a href='{{CNN[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-  <br>
+</div>
+    </div>
+  </div>  <br>
        {% endfor %}
 </div>
 </main>
 
 
 <main role="main" class="container">
+<div class="card">
+    <div class="card-header" id="FoxNews">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#FoxNews" aria-expanded="true" aria-controls="collapseOne">
+          FoxNews
+        </button>
+      </h5>
+    </div>
+  
   <div class="jumbotron text-center">
-
+   <div id="CNN" class="collapse show" aria-labelledby="FoxNews" data-parent="#accordion">
+      <div class="card-body">
     {% for key in FoxNews%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
@@ -110,35 +132,26 @@ function topFunction() {
       <a href='{{FoxNews[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-  <br>
+</div>
+    </div>
+  </div>  <br>
        {% endfor %}
 </div>
 </main>
 
-
 <main role="main" class="container">
-  <div class="jumbotron text-center">
-
-    {% for key in AbcNews%}
-        <div class="row no-gutters bg-light position-relative">
-    <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
+<div class="card">
+    <div class="card-header" id="TheGuardian">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#TheGuardian" aria-expanded="true" aria-controls="collapseOne">
+          FoxNews
+        </button>
+      </h5>
     </div>
-    <div class="col-md-6 position-static p-4 pl-md-0">
-      <h5 class="mt-0">AbcNews</h5>
-      <p>{{AbcNews[key]["title"]}}</p>
-      <a href='{{AbcNews[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-    </div>
-  </div>
-  <br>
-       {% endfor %}
-</div>
-</main>
-
-
-<main role="main" class="container">
+  
   <div class="jumbotron text-center">
-
+   <div id="TheGuardian" class="collapse show" aria-labelledby="TheGuardian" data-parent="#accordion">
+      <div class="card-body">
     {% for key in TheGuardian%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
@@ -150,7 +163,40 @@ function topFunction() {
       <a href='{{TheGuardian[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-  <br>
+</div>
+    </div>
+  </div>  <br>
+       {% endfor %}
+</div>
+</main>
+
+<main role="main" class="container">
+<div class="card">
+    <div class="card-header" id="AbcNews">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#AbcNews" aria-expanded="true" aria-controls="collapseOne">
+          FoxNews
+        </button>
+      </h5>
+    </div>
+  
+  <div class="jumbotron text-center">
+   <div id="AbcNews" class="collapse show" aria-labelledby="AbcNews" data-parent="#accordion">
+      <div class="card-body">
+    {% for key in AbcNews%}
+        <div class="row no-gutters bg-light position-relative">
+    <div class="col-md-6 mb-md-0 p-md-4">
+      <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
+    </div>
+    <div class="col-md-6 position-static p-4 pl-md-0">
+      <h5 class="mt-0">AbcNews</h5>
+      <p>{{AbcNews[key]["title"]}}</p>
+      <a href='{{AbcNews[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>  <br>
        {% endfor %}
 </div>
 </main>
