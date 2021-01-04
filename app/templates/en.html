@@ -76,20 +76,14 @@ function topFunction() {
 
 
 
+
 <main role="main" class="container">
-<div class="card">
-    <div class="card-header" id="CNN">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#CNN" aria-expanded="true" aria-controls="collapseOne">
-          CNN
-        </button>
-      </h5>
-    </div>
-  
   <div class="jumbotron text-center">
-   <div id="CNN" class="collapse show" aria-labelledby="CNN" data-parent="#accordion">
-      <div class="card-body">
-    {% for key in CNN%}
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#CNN" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">CNN</a></p>
+
+    <div class="collapse multi-collapse" id="CNN">
+      <div class="card card-body">
+         {% for key in CNN%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{CNN[key]["img"]}}' >
@@ -100,28 +94,22 @@ function topFunction() {
       <a href='{{CNN[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-</div>
-    </div>
-  </div>  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
 </main>
 
-
 <main role="main" class="container">
-<div class="card">
-    <div class="card-header" id="FoxNews">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#FoxNews" aria-expanded="true" aria-controls="collapseOne">
-          FoxNews
-        </button>
-      </h5>
-    </div>
-  
   <div class="jumbotron text-center">
-   <div id="CNN" class="collapse show" aria-labelledby="FoxNews" data-parent="#accordion">
-      <div class="card-body">
-    {% for key in FoxNews%}
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#FoxNews" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">FoxNews</a></p>
+
+    <div class="collapse multi-collapse" id="FoxNews">
+      <div class="card card-body">
+         {% for key in FoxNews%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{FoxNews[key]["img"]}}' >
@@ -132,27 +120,23 @@ function topFunction() {
       <a href='{{FoxNews[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-</div>
-    </div>
-  </div>  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
 </main>
 
+
 <main role="main" class="container">
-<div class="card">
-    <div class="card-header" id="TheGuardian">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#TheGuardian" aria-expanded="true" aria-controls="collapseOne">
-          FoxNews
-        </button>
-      </h5>
-    </div>
-  
   <div class="jumbotron text-center">
-   <div id="TheGuardian" class="collapse show" aria-labelledby="TheGuardian" data-parent="#accordion">
-      <div class="card-body">
-    {% for key in TheGuardian%}
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#TheGuardian" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">TheGuardian</a></p>
+
+    <div class="collapse multi-collapse" id="TheGuardian">
+      <div class="card card-body">
+         {% for key in TheGuardian%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{TheGuardian[key]["img"]}}' >
@@ -163,27 +147,24 @@ function topFunction() {
       <a href='{{TheGuardian[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-</div>
-    </div>
-  </div>  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
 </main>
 
+
+
 <main role="main" class="container">
-<div class="card">
-    <div class="card-header" id="AbcNews">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#AbcNews" aria-expanded="true" aria-controls="collapseOne">
-          FoxNews
-        </button>
-      </h5>
-    </div>
-  
   <div class="jumbotron text-center">
-   <div id="AbcNews" class="collapse show" aria-labelledby="AbcNews" data-parent="#accordion">
-      <div class="card-body">
-    {% for key in AbcNews%}
+   <p><a class="btn btn-primary" data-toggle="collapse" href="#AbcNews" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">AbcNews</a></p>
+
+    <div class="collapse multi-collapse" id="AbcNews">
+      <div class="card card-body">
+         {% for key in AbcNews%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
       <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
@@ -194,10 +175,13 @@ function topFunction() {
       <a href='{{AbcNews[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
     </div>
   </div>
-</div>
-    </div>
-  </div>  <br>
+<br>
        {% endfor %}
+      </div>
+    </div>
+  </div>
+   
 </div>
 </main>
+
 
