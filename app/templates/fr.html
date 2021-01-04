@@ -28,7 +28,10 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in LeMonde%}
-        <a href='{{LeMonde[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{LeMonde[key]["img"]}}' ></a>
+        <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{LeMonde[key]["img"]}}' >
+        </br>
+        <a href='{{LeMonde[key]["link"]}}' target="_blank">{{LeMonde[key]["title"]}}</a>
+        </br>
         </br>
         {% endfor %}
     </div>
@@ -37,7 +40,11 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in LeParisien%}
-        <a href='{{LeParisien[key]["link"]}}' target="_blank" ><img border="0"  class="img-fluid"   src='{{LeParisien[key]["img"]}}' >
+        <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}"  class="img-fluid"   src='{{LeParisien[key]["img"]}}' >
+    </br>
+        <a href='{{LeParisien[key]["link"]}}' target="_blank" >{{LeParisien[key]["title"]}}</a>
+        
+        </br>
         </br>
         {% endfor %}
     </div>
@@ -46,7 +53,10 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in MediaPart%}
-        <a href='{{MediaPart[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{MediaPart[key]["img"]}}' >
+        <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" class="img-fluid"   src='{{MediaPart[key]["img"]}}' >
+    </br>
+        <a href='{{MediaPart[key]["link"]}}' target="_blank">{{MediaPart[key]["title"]}}</a>
+        </br>
         </br>
         {% endfor %}
     </div>
@@ -54,7 +64,10 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in BFMTV%}
-        <a href='{{BFMTV[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{BFMTV[key]["img"]}}' >
+        <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}"  class="img-fluid"   src='{{BFMTV[key]["img"]}}' >
+    </br>
+        <a href='{{BFMTV[key]["link"]}}' target="_blank">{{BFMTV[key]["title"]}}</a>
+        </br>
         </br>
         {% endfor %}
     </div>
@@ -62,7 +75,10 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in Liberation%}
-        <a href='{{Liberation[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{Liberation[key]["img"]}}' >
+        <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}"  class="img-fluid"   src='{{Liberation[key]["img"]}}' >
+    </br>
+        <a href='{{Liberation[key]["link"]}}' target="_blank">{{Liberation[key]["title"]}}</a>
+        </br>
         </br>
         {% endfor %}
     </div>
@@ -70,7 +86,10 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in FranceTvINFO%}
-        <a href='{{FranceTvINFO[key]["link"]}}' target="_blank" ><img border="0"  class="img-fluid"   src='{{FranceTvINFO[key]["img"]}}' >
+        <img border="0" onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}"  class="img-fluid"   src='{{FranceTvINFO[key]["img"]}}' >
+    </br>
+        <a href='{{FranceTvINFO[key]["link"]}}' target="_blank" >{{FranceTvINFO[key]["title"]}}</a>
+        </br>
         </br>
         {% endfor %}
     </div>

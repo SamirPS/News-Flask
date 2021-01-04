@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-newsscrapper-samirps = "==0.0.2"
 gunicorn = "*"
 flask = "*"
+newsscrapper-samirps = "==0.0.3"
 
 [dev-packages]
 

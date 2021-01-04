@@ -22,11 +22,17 @@
   </div>  
 </nav>
 <br>
+
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in CNN%}
-        <a href='{{CNN[key]["link"]}}' target="_blank"><img border="0" class="img-fluid"  src='{{CNN[key]["img"]}}' ></a>
+        <img border="0" class="img-fluid"  onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{CNN[key]["img"]}}' >
+      </br>
+
+        <a href='{{CNN[key]["link"]}}' target="_blank">{{CNN[key]["title"]}}</a>
         </br>
+      </br>
+
         {% endfor %}
     </div>
 </main>
@@ -34,7 +40,12 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in FoxNews%}
-        <a href='{{FoxNews[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{FoxNews[key]["img"]}}' >
+        <img border="0"  class="img-fluid"  onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{FoxNews[key]["img"]}}' >
+      </br>
+
+        <a href='{{FoxNews[key]["link"]}}' target="_blank">{{FoxNews[key]["title"]}}</a>
+      </br>
+
         </br>
         {% endfor %}
     </div>
@@ -43,7 +54,12 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in AbcNews%}
-        <a href='{{AbcNews[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
+        <img border="0"  class="img-fluid"   onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{AbcNews[key]["img"]}}' >
+      </br>
+
+        <a href='{{AbcNews[key]["link"]}}' target="_blank">{{AbcNews[key]["title"]}}</a>
+      </br>
+
         </br>
         {% endfor %}
     </div>
@@ -51,7 +67,12 @@
 <main role="main" class="container">
     <div class="jumbotron text-center">
         {% for key in TheGuardian%}
-        <a href='{{TheGuardian[key]["link"]}}' target="_blank"><img border="0"  class="img-fluid"   src='{{TheGuardian[key]["img"]}}' >
+        <img border="0"  class="img-fluid"    onerror="this.onerror=null; this.src={{url_for('static', filename='Default.png')}}" src='{{TheGuardian[key]["img"]}}' >
+      </br>
+
+        <a href='{{TheGuardian[key]["link"]}}' target="_blank">{{TheGuardian[key]["title"]}}</a>
+      </br>
+
         </br>
         {% endfor %}
     </div>
