@@ -1,4 +1,4 @@
-  from flask import (
+from flask import (
     Blueprint, make_response, send_from_directory
 )
 
