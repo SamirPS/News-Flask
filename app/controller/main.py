@@ -1,14 +1,15 @@
-from flask import Flask,render_template
+from flask import Flask,Blueprint, session, redirect, url_for, request,render_template
 from newsscrapper import fr
 from newsscrapper import en
 
 
-app= Flask(__name__)
-@app.route('/')
+bp = Blueprint('main', __name__)
+
+@bp.route('/')
 def index():
   return render_template("index.html")
 
-@app.route('/fr')
+@bp.route('/fr')
 def newsfr():
     return render_template("fr.html",LeMonde =fr.MondeSC(),
     LeParisien=fr.ParisSC(),
@@ -17,7 +18,7 @@ def newsfr():
     Liberation =fr.LibeSC(),
     FranceTvINFO =fr.FTISC())
 
-@app.route('/en')
+@bp.route('/en')
 def newsen():
     return render_template("en.html",CNN =en.CNNSC(),
     FoxNews=en.FoxNewsSC(),
