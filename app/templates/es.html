@@ -113,7 +113,7 @@ function topFunction() {
            {% for key in EFE%}
           <div class="row no-gutters bg-light position-relative">
       <div class="col-md-6 mb-md-0 p-md-4">
-        {% if {{EFE[key]["img"]}}=="" %}
+        {% if EFE[key]["img"]=="" %}
         <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
         {% else %}
         <img border="0"  class="img-fluid"   src='{{EFE[key]["img"]}}' >
@@ -144,7 +144,7 @@ function topFunction() {
            {% for key in ELPAIS%}
           <div class="row no-gutters bg-light position-relative">
       <div class="col-md-6 mb-md-0 p-md-4">
-        {% if {{ELPAIS[key]["img"]}}==""  %}
+        {% if ELPAIS[key]["img"]==""  %}
         <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
         {% else %}
         <img border="0"  class="img-fluid"   src='{{ELPAIS[key]["img"]}}' >
