@@ -9,9 +9,9 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
   <link rel="icon" href="{{ url_for('static', filename='css/style.css') }}" type="image/x-icon">
+<!------ Include the above in your HEAD tag ---------->
 
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -23,7 +23,7 @@ body {
   font-size: 20px;
 }
 
- .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #000000 !important;
 }
  
@@ -73,6 +73,7 @@ function topFunction() {
 </script>
 
 
+
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <a class="navbar-brand" href="https://newswebs.herokuapp.com/">NewsHome</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -85,151 +86,54 @@ function topFunction() {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://newswebs.herokuapp.com/en">En</a>
-      </li>  
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="https://newswebs.herokuapp.com/es">Es</a>
-      </li>  
+      </li>   
     </ul>
-    <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <button id="installButton"   style="visibility:hidden;">Install App</button>
-      <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <button id="installButton"  style="visibility:hidden;">Install App</button>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
 
-      
-    </li>
-  </ul>
+        
+      </li>
+    </ul>
+    
   </div>  
 </nav>
 <br>
 
-
-
-
+{% for i in L %}
 <main role="main" class="container">
-  <div class="jumbotron text-center">
-   <p><a class="btn btn-primary" data-toggle="collapse" href="#CNN" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">CNN</a></p>
-
-    <div class="collapse multi-collapse" id="CNN">
-      <div class="card card-body">
-         {% for key in CNN%}
-        <div class="row no-gutters bg-light position-relative">
-    <div class="col-md-6 mb-md-0 p-md-4">
-      {% if CNN[key]["img"]==""  %}
+    <div class="jumbotron text-center">
+     <p><a class="btn btn-primary" data-toggle="collapse" href="#{{i[0]}}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">{{i[0]}}</a></p>
+  
+      <div class="collapse multi-collapse" id="{{i[0]}}">
+        <div class="card card-body">
+           {% for key in i[1] %}
+          <div class="row no-gutters bg-light position-relative">
+      <div class="col-md-6 mb-md-0 p-md-4">
+        {% if i[1][key]["img"]=="" %}
         <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
         {% else %}
-        <img border="0"  class="img-fluid"   src='{{CNN[key]["img"]}}' >
+        <img border="0"  class="img-fluid"   src='{{i[1][key]["img"]}}' >
         
         {% endif %}
-    </div>
-    <div class="col-md-6 position-static p-4 pl-md-0">
-      <h5 class="mt-0">CNN</h5>
-      <p>{{CNN[key]["title"]}}</p>
-      <a href='{{CNN[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-    </div>
-  </div>
-<br>
-       {% endfor %}
+      </div>
+      <div class="col-md-6 position-static p-4 pl-md-0">
+        <h5 class="mt-0">{{i[0]}}</h5>
+        <p>{{i[1][key]["title"]}}</p>
+        <a href='{{i[1][key]["link"]}}' class="stretched-link" target="_blank">Go</a>
       </div>
     </div>
-  </div>
-   
-</div>
-</main>
-
-<main role="main" class="container">
-  <div class="jumbotron text-center">
-   <p><a class="btn btn-primary" data-toggle="collapse" href="#FoxNews" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">FoxNews</a></p>
-
-    <div class="collapse multi-collapse" id="FoxNews">
-      <div class="card card-body">
-         {% for key in FoxNews%}
-        <div class="row no-gutters bg-light position-relative">
-    <div class="col-md-6 mb-md-0 p-md-4">
-      {% if FoxNews[key]["img"]==""  %}
-        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
-        {% else %}
-        <img border="0"  class="img-fluid"   src='{{FoxNews[key]["img"]}}' >
-        
-        {% endif %}
-    </div>
-    <div class="col-md-6 position-static p-4 pl-md-0">
-      <h5 class="mt-0">FoxNews</h5>
-      <p>{{FoxNews[key]["title"]}}</p>
-      <a href='{{FoxNews[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-    </div>
-  </div>
-<br>
-       {% endfor %}
+  <br>
+         {% endfor %}
+        </div>
       </div>
     </div>
+     
   </div>
-   
-</div>
-</main>
+  </main>
 
-
-<main role="main" class="container">
-  <div class="jumbotron text-center">
-   <p><a class="btn btn-primary" data-toggle="collapse" href="#TheGuardian" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">TheGuardian</a></p>
-
-    <div class="collapse multi-collapse" id="TheGuardian">
-      <div class="card card-body">
-         {% for key in TheGuardian%}
-        <div class="row no-gutters bg-light position-relative">
-    <div class="col-md-6 mb-md-0 p-md-4">
-      {% if TheGuardian[key]["img"]==""  %}
-        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
-        {% else %}
-        <img border="0"  class="img-fluid"   src='{{TheGuardian[key]["img"]}}' >
-        
-        {% endif %}
-    </div>
-    <div class="col-md-6 position-static p-4 pl-md-0">
-      <h5 class="mt-0">TheGuardian</h5>
-      <p>{{TheGuardian[key]["title"]}}</p>
-      <a href='{{TheGuardian[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-    </div>
-  </div>
-<br>
-       {% endfor %}
-      </div>
-    </div>
-  </div>
-   
-</div>
-</main>
-
-
-
-<main role="main" class="container">
-  <div class="jumbotron text-center">
-   <p><a class="btn btn-primary" data-toggle="collapse" href="#AbcNews" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">AbcNews</a></p>
-
-    <div class="collapse multi-collapse" id="AbcNews">
-      <div class="card card-body">
-         {% for key in AbcNews%}
-        <div class="row no-gutters bg-light position-relative">
-    <div class="col-md-6 mb-md-0 p-md-4">
-      {% if AbcNews[key]["img"]==""  %}
-        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
-        {% else %}
-        <img border="0"  class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
-        
-        {% endif %}
-    </div>
-    <div class="col-md-6 position-static p-4 pl-md-0">
-      <h5 class="mt-0">AbcNews</h5>
-      <p>{{AbcNews[key]["title"]}}</p>
-      <a href='{{AbcNews[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-    </div>
-  </div>
-<br>
-       {% endfor %}
-      </div>
-    </div>
-  </div>
-   
-</div>
-</main>
-
-
+{% endfor %}

@@ -11,19 +11,11 @@ def index():
 
 @bp.route('/fr')
 def newsfr():
-    return render_template("fr.html",LeMonde =fr.MondeSC(),
-    LeParisien=fr.ParisSC(),
-    MediaPart=fr.MediaPartSC(),
-    BFMTV =fr.BmftvSC(),
-    Liberation =fr.LibeSC(),
-    FranceTvINFO =fr.FTISC())
+    return render_template("fr.html",L=[["LeMonde",fr.MondeSC()],["LeParisien",fr.ParisSC()],["MediaPart",fr.MediaPartSC()],["BFMTV",fr.BmftvSC()],["Liberation",fr.LibeSC()],["FranceTvINFO",fr.FTISC()]])
 
 @bp.route('/en')
 def newsen():
-    return render_template("en.html",CNN =en.CNNSC(),
-    FoxNews=en.FoxNewsSC(),
-    AbcNews= en.ABCNewsSC(),
-    TheGuardian= en.TheGuardianSC())
+    return render_template("en.html",L=[["CNN",en.CNNSC()],["FoxNews",en.FoxNewsSC()],["AbcNews",en.ABCNewsSC()],["TheGuardian",en.TheGuardianSC()]])
 
 @bp.route('/es')
 def newses():
