@@ -1,7 +1,7 @@
 from flask import Flask,Blueprint, session, redirect, url_for, request,render_template
 from newsscrapper import fr
 from newsscrapper import en
-
+from newsscrapper import es
 
 bp = Blueprint('main', __name__)
 
