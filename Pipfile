@@ -6,11 +6,11 @@ name = "pypi"
 [packages]
 gunicorn = "*"
 flask = "*"
-newsscrapper-samirps = "==0.0.5"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-sslify = "*"
 python-dotenv = "*"
+newsscrapper-samirps = "*"
 
 [dev-packages]
 

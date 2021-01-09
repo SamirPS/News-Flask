@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b2eb5cd5117083ab8f8473bf5400aebce8334ec4eff7146dfb8455084524d7b5"
+            "sha256": "ccbe9da634f32acdc45cd0ba8f6423222047a2e872cf6ec6a78d5c4939a71236"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -159,11 +159,11 @@
         },
         "newsscrapper-samirps": {
             "hashes": [
-                "sha256:0a019d85999a94983f3b1ab1d7be5a46a6d72f45c3273298da351fb2281d30e3",
-                "sha256:cdd462a83bb235870adada9a795496159c9eff80a1de9123d416848366461a32"
+                "sha256:4f88c9190a840deda3e9ada86a800691f231965d3008bf56b74f85af2555b5b7",
+                "sha256:a1a3984c804033a01a2d0da4ba66fb60a9e38a66f759dcf7639d52499068452e"
             ],
             "index": "pypi",
-            "version": "==0.0.5"
+            "version": "==0.0.6"
         },
         "python-dateutil": {
             "hashes": [
