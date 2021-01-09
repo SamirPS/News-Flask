@@ -114,7 +114,12 @@ function topFunction() {
          {% for key in CNN%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{CNN[key]["img"]}}' >
+      {% if CNN[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{CNN[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">CNN</h5>
@@ -140,7 +145,12 @@ function topFunction() {
          {% for key in FoxNews%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{FoxNews[key]["img"]}}' >
+      {% if FoxNews[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{FoxNews[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">FoxNews</h5>
@@ -167,7 +177,12 @@ function topFunction() {
          {% for key in TheGuardian%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{TheGuardian[key]["img"]}}' >
+      {% if TheGuardian[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{TheGuardian[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">TheGuardian</h5>
@@ -195,7 +210,12 @@ function topFunction() {
          {% for key in AbcNews%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
+      {% if AbcNews[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{AbcNews[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">AbcNews</h5>

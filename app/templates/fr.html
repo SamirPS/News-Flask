@@ -113,7 +113,12 @@ function topFunction() {
          {% for key in LeMonde%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{LeMonde[key]["img"]}}' >
+      {% if LeMonde[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{LeMonde[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">LeMonde</h5>
@@ -139,7 +144,12 @@ function topFunction() {
          {% for key in LeParisien%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{LeParisien[key]["img"]}}' >
+      {% if LeParisien[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{LeParisien[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">LeParisien</h5>
@@ -165,7 +175,12 @@ function topFunction() {
          {% for key in MediaPart%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{MediaPart[key]["img"]}}' >
+      {% if MediaPart[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{MediaPart[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">MediaPart</h5>
@@ -191,7 +206,12 @@ function topFunction() {
          {% for key in BFMTV%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{BFMTV[key]["img"]}}' >
+      {% if BFMTV[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{BFMTV[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">BFMTV</h5>
@@ -218,7 +238,12 @@ function topFunction() {
          {% for key in Liberation%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{Liberation[key]["img"]}}' >
+      {% if Liberation[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{Liberation[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">Liberation</h5>
@@ -246,7 +271,12 @@ function topFunction() {
          {% for key in FranceTvINFO%}
         <div class="row no-gutters bg-light position-relative">
     <div class="col-md-6 mb-md-0 p-md-4">
-      <img border="0"  class="img-fluid"   src='{{FranceTvINFO[key]["img"]}}' >
+      {% if FranceTvINFO[key]["img"]==""  %}
+        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
+        {% else %}
+        <img border="0"  class="img-fluid"   src='{{FranceTvINFO[key]["img"]}}' >
+        
+        {% endif %}
     </div>
     <div class="col-md-6 position-static p-4 pl-md-0">
       <h5 class="mt-0">FranceTvINFO</h5>
