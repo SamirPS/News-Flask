@@ -104,26 +104,27 @@ function topFunction() {
 </nav>
 <br>
 
+{% for i in L}
 <main role="main" class="container">
     <div class="jumbotron text-center">
-     <p><a class="btn btn-primary" data-toggle="collapse" href="#EFE" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">EFE</a></p>
+     <p><a class="btn btn-primary" data-toggle="collapse" href="#{{i[0]}}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">i[0]</a></p>
   
-      <div class="collapse multi-collapse" id="EFE">
+      <div class="collapse multi-collapse" id="{{i[0]}}">
         <div class="card card-body">
-           {% for key in EFE%}
+           {% for key in i[1] %}
           <div class="row no-gutters bg-light position-relative">
       <div class="col-md-6 mb-md-0 p-md-4">
-        {% if EFE[key]["img"]=="" %}
+        {% if i[1][key]["img"]=="" %}
         <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
         {% else %}
-        <img border="0"  class="img-fluid"   src='{{EFE[key]["img"]}}' >
+        <img border="0"  class="img-fluid"   src='{{i[1][key]["img"]}}' >
         
         {% endif %}
       </div>
       <div class="col-md-6 position-static p-4 pl-md-0">
-        <h5 class="mt-0">EFE</h5>
-        <p>{{EFE[key]["title"]}}</p>
-        <a href='{{EFE[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
+        <h5 class="mt-0">i[0]</h5>
+        <p>{{i[1][key]["title"]}}</p>
+        <a href='{{i[1][key]["link"]}}' class="stretched-link" target="_blank">Go</a>
       </div>
     </div>
   <br>
@@ -135,35 +136,4 @@ function topFunction() {
   </div>
   </main>
 
-  <main role="main" class="container">
-    <div class="jumbotron text-center">
-     <p><a class="btn btn-primary" data-toggle="collapse" href="#ELPAIS" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">ELPAIS</a></p>
-  
-      <div class="collapse multi-collapse" id="ELPAIS">
-        <div class="card card-body">
-           {% for key in ELPAIS%}
-          <div class="row no-gutters bg-light position-relative">
-      <div class="col-md-6 mb-md-0 p-md-4">
-        {% if ELPAIS[key]["img"]==""  %}
-        <img border="0"  class="img-fluid"   src="{{ url_for('static', filename='images/rien.jpg') }}" >
-        {% else %}
-        <img border="0"  class="img-fluid"   src='{{ELPAIS[key]["img"]}}' >
-        
-        {% endif %}
-
-      </div>
-      <div class="col-md-6 position-static p-4 pl-md-0">
-        <h5 class="mt-0">ELPAIS</h5>
-        <p>{{ELPAIS[key]["title"]}}</p>
-        <a href='{{ELPAIS[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
-      </div>
-    </div>
-  <br>
-         {% endfor %}
-        </div>
-      </div>
-    </div>
-     
-  </div>
-  </main>
-
+{% endfor %}

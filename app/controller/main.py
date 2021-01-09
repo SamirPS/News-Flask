@@ -27,5 +27,4 @@ def newsen():
 
 @bp.route('/es')
 def newses():
-    return render_template("es.html",EFE =es.EFESC(),
-    ELPAIS=es.ELPAISSC())
+    return render_template("es.html",L=[["EFE",es.EFESC()],["ELPAIS",es.ELPAISSC()]])
