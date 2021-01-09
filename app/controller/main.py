@@ -24,3 +24,8 @@ def newsen():
     FoxNews=en.FoxNewsSC(),
     AbcNews= en.ABCNewsSC(),
     TheGuardian= en.TheGuardianSC())
+
+@bp.route('/es')
+def newses():
+    return render_template("es.html",EFE =es.EFESC(),
+    ELPAIS=es.ELPAISSC())
