@@ -159,11 +159,11 @@
         },
         "newsscrapper-samirps": {
             "hashes": [
-                "sha256:4f88c9190a840deda3e9ada86a800691f231965d3008bf56b74f85af2555b5b7",
-                "sha256:a1a3984c804033a01a2d0da4ba66fb60a9e38a66f759dcf7639d52499068452e"
+                "sha256:a04403ba84e2a6d62d650676d15513a08ae7b08f6b91babdf9e78fbef5145ca9",
+                "sha256:f45a13e75de676616160367f14847ed18f418e67cd4c24994cb0b95a5f763693"
             ],
             "index": "pypi",
-            "version": "==0.0.6"
+            "version": "==0.1.0"
         },
         "python-dateutil": {
             "hashes": [
