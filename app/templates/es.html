@@ -103,3 +103,56 @@ function topFunction() {
   </div>  
 </nav>
 <br>
+
+<main role="main" class="container">
+    <div class="jumbotron text-center">
+     <p><a class="btn btn-primary" data-toggle="collapse" href="#EFE" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">EFE</a></p>
+  
+      <div class="collapse multi-collapse" id="EFE">
+        <div class="card card-body">
+           {% for key in EFE%}
+          <div class="row no-gutters bg-light position-relative">
+      <div class="col-md-6 mb-md-0 p-md-4">
+        <img border="0"  class="img-fluid"   src='{{EFE[key]["img"]}}' >
+      </div>
+      <div class="col-md-6 position-static p-4 pl-md-0">
+        <h5 class="mt-0">EFE</h5>
+        <p>{{EFE[key]["title"]}}</p>
+        <a href='{{EFE[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
+      </div>
+    </div>
+  <br>
+         {% endfor %}
+        </div>
+      </div>
+    </div>
+     
+  </div>
+  </main>
+
+  <main role="main" class="container">
+    <div class="jumbotron text-center">
+     <p><a class="btn btn-primary" data-toggle="collapse" href="#ELPAIS" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">ELPAIS</a></p>
+  
+      <div class="collapse multi-collapse" id="ELPAIS">
+        <div class="card card-body">
+           {% for key in ELPAIS%}
+          <div class="row no-gutters bg-light position-relative">
+      <div class="col-md-6 mb-md-0 p-md-4">
+        <img border="0"  class="img-fluid"   src='{{ELPAIS[key]["img"]}}' >
+      </div>
+      <div class="col-md-6 position-static p-4 pl-md-0">
+        <h5 class="mt-0">ELPAIS</h5>
+        <p>{{ELPAIS[key]["title"]}}</p>
+        <a href='{{ELPAIS[key]["link"]}}' class="stretched-link" target="_blank">Go</a>
+      </div>
+    </div>
+  <br>
+         {% endfor %}
+        </div>
+      </div>
+    </div>
+     
+  </div>
+  </main>
+
