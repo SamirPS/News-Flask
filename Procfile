@@ -1,1 +1,1 @@
-web: sh -c 'cd app && gunicorn "app:create_app()" --log-file=-'
+web: gunicorn "app:create_app()" --log-file=-'
