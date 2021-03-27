@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 gunicorn = "*"
 flask = "*"
-flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-sslify = "*"
 python-dotenv = "*"
