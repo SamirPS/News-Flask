@@ -9,9 +9,9 @@ flask = "*"
 flask-migrate = "*"
 flask-sslify = "*"
 python-dotenv = "*"
-newsscrapper-samirps = "*"
+newsscrapper-samirps = "0.1.1"
 
 [dev-packages]
 
 [requires]
-python_version = "3.7"
+python_version = "3.7.10"
