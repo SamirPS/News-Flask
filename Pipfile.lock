@@ -5,7 +5,7 @@
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.7"
+            "python_version": "3.7.10"
         },
         "sources": [
             {
@@ -163,7 +163,7 @@
                 "sha256:f45a13e75de676616160367f14847ed18f418e67cd4c24994cb0b95a5f763693"
             ],
             "index": "pypi",
-            "version": "==0.1.0"
+            "version": "==0.1.1"
         },
         "python-dateutil": {
             "hashes": [
