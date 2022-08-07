@@ -1,6 +1,6 @@
+newsscrapper-samirps
 gunicorn
 flask
 flask-migrate
 flask-sslify
 python-dotenv
-newsscrapper-samirps
