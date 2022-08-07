@@ -15,7 +15,7 @@ def newsfr():
 
 @bp.route('/en')
 def newsen():
-    return render_template("en.html",L=[["CNN",en.CNNSC()],["FoxNews",en.FoxNewsSC()],["AbcNews",en.ABCNewsSC()],["TheGuardian",en.TheGuardianSC()]])
+    return render_template("en.html",L=[["CNN",en.CNNSC()],["FoxNews",en.FoxNewsSC()],["AbcNews",en.ABCNewsSC()],["TheGuardian",en.TheGuardianSC()],["TheNewYorkTimes",en.TheNewYorkTimesSC()]])
 
 @bp.route('/es')
 def newses():
